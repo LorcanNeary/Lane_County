@@ -75,17 +75,22 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.image("https://salanecounty.blob.core.windows.net/sc-bot-images/lane_county_logo_sharper.png?sp=r&st=2025-02-18T21:24:10Z&se=2026-02-18T05:24:10Z&spr=https&sv=2022-11-02&sr=b&sig=x%2Be%2FPg6rdqJr02kllXpgF0esNvfpczIv7lOyg%2BX30N8%3D", width=200)
-    st.header("Lane County 'How Do I' AI Bot")
+    col1, col2 = st.columns([3, 1])  # Adjusts column widths
+
+    with col1:
+        st.header("Lane County 'How Do I' AI Bot")
+
+    with col2:
+        st.image("https://salanecounty.blob.core.windows.net/sc-bot-images/lane_county_logo_sharper.png?sp=r&st=2025-02-18T21:24:10Z&se=2026-02-18T05:24:10Z&spr=https&sv=2022-11-02&sr=b&sig=x%2Be%2FPg6rdqJr02kllXpgF0esNvfpczIv7lOyg%2BX30N8%3D", width=80)  # Smaller image
 
     user_question = st.text_input("### Ask any 'How do I' question:")
     if user_question:
         handle_userinput(user_question)
 
     with st.sidebar:
-        st.subheader("Lane Co Procedure Dictionary")
+        st.subheader("Lane County Procedure Dictionaries")
         pdf_docs = st.file_uploader(
-            "Upload your Lane Co Procedure PDFs click 'Process'", accept_multiple_files=True)
+            "Upload Lane County Procedure PDFs & click 'Process'", accept_multiple_files=True)
         if st.button("Process"):
             with st.spinner("Processing"):
                 # get pdf text
