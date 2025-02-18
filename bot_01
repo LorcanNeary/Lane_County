@@ -1,0 +1,2 @@
+#!/bin/bash
+nohup streamlit run ~/Lane_County/lane_county_bot_01.py --server.enableCORS=false --server.enableXsrfProtection=false --server.headless=true > ~/Lane_County/streamlit.log 2>&1 &
