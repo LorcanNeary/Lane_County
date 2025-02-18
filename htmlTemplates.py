@@ -28,7 +28,7 @@ css = '''
 bot_template = '''
 <div class="chat-message bot">
     <div class="avatar">
-        <img src="https://i.ibb.co/cN0nmSj/Screenshot-2023-05-28-at-02-37-21.png" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
+        <img src="https://salanecounty.blob.core.windows.net/sc-bot-images/lane_county_robot.webp?sp=r&st=2025-02-18T20:32:19Z&se=2025-02-19T04:32:19Z&spr=https&sv=2022-11-02&sr=b&sig=t9Gt1TQJF1u9r4NJp2VvdRdE0zGTJs0%2BVW2Dv9Vs360%3D" style="max-height: 78px; max-width: 78px; border-radius: 50%; object-fit: cover;">
     </div>
     <div class="message">{{MSG}}</div>
 </div>
@@ -37,7 +37,7 @@ bot_template = '''
 user_template = '''
 <div class="chat-message user">
     <div class="avatar">
-        <img src="https://sadvhagrih.blob.core.windows.net/sa-image-container/Lorcan_20201005.png">
+        <img src="https://salanecounty.blob.core.windows.net/sc-bot-images/lorcan_image.png?sp=r&st=2025-02-18T20:34:59Z&se=2025-02-19T04:34:59Z&spr=https&sv=2022-11-02&sr=b&sig=HCcNY6MG93CaHm7l%2Br%2BBu%2BpDmZmiCeUo38hd%2Fj%2F%2Faqg%3D">
     </div>    
     <div class="message">{{MSG}}</div>
 </div>

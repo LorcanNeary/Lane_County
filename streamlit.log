@@ -1,4 +1,18 @@
 
 Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
 
-2025-02-18 19:28:08.566 Port 8501 is already in use
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.1.0.4:8501
+  External URL: http://172.191.43.123:8501
+
+/home/vm_admin/Lane_County/lane_county_bot_01.py:34: LangChainDeprecationWarning: The class `OpenAIEmbeddings` was deprecated in LangChain 0.0.9 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-openai package and should be used instead. To use it run `pip install -U :class:`~langchain-openai` and import as `from :class:`~langchain_openai import OpenAIEmbeddings``.
+  embeddings = OpenAIEmbeddings()
+/home/vm_admin/Lane_County/lane_county_bot_01.py:41: LangChainDeprecationWarning: The class `ChatOpenAI` was deprecated in LangChain 0.0.10 and will be removed in 1.0. An updated version of the class exists in the :class:`~langchain-openai package and should be used instead. To use it run `pip install -U :class:`~langchain-openai` and import as `from :class:`~langchain_openai import ChatOpenAI``.
+  llm = ChatOpenAI()
+/home/vm_admin/Lane_County/lane_county_bot_01.py:44: LangChainDeprecationWarning: Please see the migration guide at: https://python.langchain.com/docs/versions/migrating_memory/
+  memory = ConversationBufferMemory(
+/home/vm_admin/Lane_County/lane_county_bot_01.py:55: LangChainDeprecationWarning: The method `Chain.__call__` was deprecated in langchain 0.1.0 and will be removed in 1.0. Use :meth:`~invoke` instead.
+  response = st.session_state.conversation({'question': user_question})
