@@ -66,7 +66,7 @@ def handle_userinput(user_question):
 
 def main():
     load_dotenv()
-    st.set_page_config(page_title="Chat with multiple PDFs",
+    st.set_page_config(page_title="Lane County 'How Do I' AI Bot",
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
@@ -75,15 +75,17 @@ def main():
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Lane County AI Assistant Chatbot:books:")
-    user_question = st.text_input("Ask any 'How do I' question:")
+    st.image("https://salanecounty.blob.core.windows.net/sc-bot-images/lane_county_logo_sharper.png?sp=r&st=2025-02-18T21:24:10Z&se=2026-02-18T05:24:10Z&spr=https&sv=2022-11-02&sr=b&sig=x%2Be%2FPg6rdqJr02kllXpgF0esNvfpczIv7lOyg%2BX30N8%3D", width=200)
+    st.header("Lane County 'How Do I' AI Bot")
+
+    user_question = st.text_input("### Ask any 'How do I' question:")
     if user_question:
         handle_userinput(user_question)
 
     with st.sidebar:
-        st.subheader("Your documents on procedure")
+        st.subheader("Lane Co Procedure Dictionary")
         pdf_docs = st.file_uploader(
-            "Upload your PDF Documents on Procedure here and click on 'Process'", accept_multiple_files=True)
+            "Upload your Lane Co Procedure PDFs click 'Process'", accept_multiple_files=True)
         if st.button("Process"):
             with st.spinner("Processing"):
                 # get pdf text
